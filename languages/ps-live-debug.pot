@@ -1,0 +1,683 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PS-Debug-Tool\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-10 08:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-4.9.22\n"
+"X-Domain: ps-live-debug"
+
+#. %1$s log filename.
+#: classes/class-ps-live-debug-live-debug.php:757
+#, php-format
+msgid "%1$s is over 2 MB. Please open it via FTP."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:830
+msgid ".log was cleared"
+msgstr ""
+
+#: classes/class-ps-live-debug-server-info.php:277
+msgid ""
+"<code>phpinfo();</code> is disabled. Please contact your hosting provider if "
+"you need more information about your PHP setup."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:166
+msgid "<strong>Save Queries: <code>define( 'SAVEQUERIES', true );</code>"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:164
+msgid "<strong>Script Debug: <code>define( 'SCRIPT_DEBUG', true );</code>"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:160
+msgid ""
+"<strong>To manually enable any of the above debugging options you can edit "
+"your wp-config.php and add the following constants right above the '/* "
+"That's all, stop editing! Happy blogging. */' line.</strong>"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:162
+msgid ""
+"<strong>CP Debug: <code>define( 'WP_DEBUG', true ); define( 'WP_DEBUG_LOG', "
+"true ); define( 'WP_DEBUG_DISPLAY', false ); @ini_set( 'display_errors', 0 );"
+"</code>"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:98
+#: classes/class-ps-live-debug-cronjob-info.php:128
+#: classes/class-ps-live-debug-helper.php:114
+#: classes/class-ps-live-debug-helper.php:128
+msgid "Actions"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:156
+msgid "aktiv"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Aktiviert das Debuggen und fügt dem ClassicPress-Admin einen Bildschirm "
+"hinzu, um das debug.log anzuzeigen."
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:361
+msgid "Alle Prüfsummen sind bestanden. Alles scheint in Ordnung zu sein!"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:52
+msgid "Allgemeine Informationen"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:235
+msgid "Alternative Namen"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:153
+msgid "Auf Deiner Website ist das Standarddesign nicht installiert"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:239
+msgid "Aussteller"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:110
+msgid "Auto Refresh Log"
+msgstr ""
+
+#. %1$s log filename.
+#: classes/class-ps-live-debug-live-debug.php:753
+#, php-format
+msgid "Awesome! %1$s scheint leer zu sein."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:117
+msgid "Backup wp-config and show options"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:248
+msgid "Benutzer"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:352
+#: classes/class-ps-live-debug-wordpress-info.php:363
+msgid "Berechtigungen"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:104
+msgid "Betreff"
+msgstr ""
+
+#: class-ps-live-debug.php:261 class-ps-live-debug.php:279
+msgid "ClassicPress"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:232
+msgid "ClassicPress Version"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:435
+msgid "ClassicPress-Verzeichnis"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:100
+msgid "Clear Log"
+msgstr ""
+
+#. %1$s log filename.
+#: classes/class-ps-live-debug-live-debug.php:761
+#, php-format
+msgid "Could not find %1$s file."
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:55
+msgid "could not run."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:814
+msgid "Could not validate nonce"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:368
+#: classes/class-ps-live-debug-tools.php:380
+msgid "Datei"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:336
+msgid "Datei nicht gefunden"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:439
+msgid "Datenbankgröße"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:236
+msgid "Datenbankversion"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:168
+msgid "Debugging in ClassicPress"
+msgstr ""
+
+#: classes/class-ps-live-debug-helper.php:88
+#: classes/class-ps-live-debug-helper.php:98
+msgid "Default Value"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:103
+msgid "Delete Log"
+msgstr ""
+
+#. Author of the plugin
+msgid "DerN3rd (WMS N@W)"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:196
+#: classes/class-ps-live-debug-wordpress-info.php:199
+msgid "Die Loopback-Anforderung an Deine Webseite ist fehlgeschlagen"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:202
+msgid "Die Loopback-Anfrage war erfolgreich"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:366
+msgid ""
+"Dies kann ein falsch positives Ergebnis sein, wenn Ihre Installation "
+"übersetzte Versionen enthält. Eine einfache Möglichkeit, dies zu beheben, "
+"besteht darin, ClassicPress neu zu installieren, aber keine Sorge, da dies "
+"nur die ClassicPress-Kerndateien betrifft."
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:490
+msgid ""
+"Du hast gerade eine E-Mail mit <code>wp_mail()</code> gesendet und es "
+"scheint zu funktionieren. Bitte überprüfe Deinen Posteingang und Spam-Ordner,"
+" um zu sehen, ob Du es erhalten hast."
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:100
+msgid "E-mail"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:227
+msgid "Erfolg! Gültige SSL-Informationen erhalten für"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:176
+msgid "Erfolgreich verbunden"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:244
+msgid "Erforderliche MySQL-Version"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:240
+msgid "Erforderliche PHP-Version"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:365
+msgid "Es scheint, dass einige Dateien geändert wurden."
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:172
+msgid "Etwas ist schief gelaufen"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:98
+msgid "Event"
+msgstr ""
+
+#: classes/class-ps-live-debug-helper.php:114
+#: classes/class-ps-live-debug-helper.php:128
+msgid "Filters"
+msgstr ""
+
+#: class-ps-live-debug.php:267 class-ps-live-debug.php:281
+msgid "Geplante Ereignisse"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:443
+msgid "Gesamtinstallationsgröße"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:446
+msgid "Geändert"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:370
+#: classes/class-ps-live-debug-tools.php:380
+msgid "Grund"
+msgstr ""
+
+#. %1$s: website name. %2$s: website url. %3$s: date. %4$s: time
+#: classes/class-ps-live-debug-tools.php:63
+#, php-format
+msgid ""
+"Hallo. Diese Testnachricht wurde von %1$s (%2$s) am %3$s um %4$s gesendet. "
+"Da Du dies liest, funktioniert es offensichtlich!"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:48
+msgid "has run successfully!"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:494
+msgid "Hier ist ein Problem beim Senden der E-Mail aufgetreten."
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:214
+#: classes/class-ps-live-debug-tools.php:232
+msgid "Host"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://n3rds.work"
+msgstr ""
+
+#: class-ps-live-debug.php:339
+msgid "ich verstehe"
+msgstr ""
+
+#. %1$s ClassicPress installation path.
+#: classes/class-ps-live-debug-live-debug.php:157
+#, php-format
+msgid ""
+"If you did not download &amp; verify the wp-config.php backup during "
+"activation you can find two extra backups via FTP as well in <code>"
+"%1$s</code> as <code>wp-config.wpld-manual-backup.php</code> and <code>wp-"
+"config.wpld-original-backup.php</code>."
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:54
+msgid "Installationsgröße"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:238
+msgid "IP Addresse"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:163
+msgid "Ja"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:268
+msgid "JSON Support"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:422
+msgid "Kann das nicht."
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:178
+msgid "Konnte keine Verbindung herstellen"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:55
+msgid "Konstanten"
+msgstr ""
+
+#: class-ps-live-debug.php:338
+msgid "Lade wp-config herunter"
+msgstr ""
+
+#: class-ps-live-debug.php:258 class-ps-live-debug.php:278
+msgid "Live Debug"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:276
+msgid "Loopback"
+msgstr ""
+
+#: classes/class-ps-live-debug-server-info.php:53
+msgid "MySQL"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:108
+msgid "Nachricht"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:165
+msgid "Nein"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:252
+msgid "Netzwerke"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:124
+msgid "Next run in"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:318
+#: classes/class-ps-live-debug-wordpress-info.php:321
+#: classes/class-ps-live-debug-wordpress-info.php:327
+#: classes/class-ps-live-debug-wordpress-info.php:331
+#: classes/class-ps-live-debug-wordpress-info.php:335
+#: classes/class-ps-live-debug-wordpress-info.php:339
+#: classes/class-ps-live-debug-wordpress-info.php:343
+msgid "Nicht beschreibbar"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:444
+msgid "Original"
+msgstr ""
+
+#: classes/class-ps-live-debug-server-info.php:54
+msgid "PHP"
+msgstr ""
+
+#: classes/class-ps-live-debug-server-info.php:55
+msgid "phpinfo()"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:264
+msgid "Plugins"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:431
+msgid "Plugins-Verzeichnis"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:215
+#: classes/class-ps-live-debug-tools.php:233
+msgid "Port"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:216
+#: classes/class-ps-live-debug-tools.php:234
+msgid "Protokol"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:241
+msgid "Protokolle"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:81
+msgid "Prüfsummen Check"
+msgstr ""
+
+#. Name of the plugin
+#: class-ps-live-debug.php:164 class-ps-live-debug.php:165
+msgid "PS-Debug-Tool"
+msgstr ""
+
+#: class-ps-live-debug.php:328
+msgid ""
+"PS-Debug-Tool ermöglicht das Debuggen, überprüft Dateien und führt "
+"verschiedene Tests durch, um Informationen über Deine Installation zu "
+"sammeln."
+msgstr ""
+
+#: class-ps-live-debug.php:273 class-ps-live-debug.php:283
+msgid "PSOURCE"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:121
+msgid "Restore wp-config"
+msgstr ""
+
+#: class-ps-live-debug.php:99
+msgid "Risiko akzeptiert."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:147
+msgid "Save Queries"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:730
+msgid "SAVEQUERIES was disabled."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:679
+msgid "SAVEQUERIES was enabled."
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:98
+#: classes/class-ps-live-debug-cronjob-info.php:128
+msgid "Schedule"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:61
+msgid "Scheduled Events"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:318
+#: classes/class-ps-live-debug-wordpress-info.php:321
+#: classes/class-ps-live-debug-wordpress-info.php:327
+#: classes/class-ps-live-debug-wordpress-info.php:331
+#: classes/class-ps-live-debug-wordpress-info.php:335
+#: classes/class-ps-live-debug-wordpress-info.php:339
+#: classes/class-ps-live-debug-wordpress-info.php:343
+msgid "Schreibbar"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:138
+msgid "Script Debug"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:628
+msgid "SCRIPT_DEBUG was disabled."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:577
+msgid "SCRIPT_DEBUG was enabled."
+msgstr ""
+
+#: class-ps-live-debug.php:264 class-ps-live-debug.php:280
+#: classes/class-ps-live-debug-server-info.php:52
+msgid "Server"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:109
+msgid "single"
+msgstr ""
+
+#: classes/class-ps-live-debug-psource.php:51
+msgid "Snapshot"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:80
+msgid "SSL Information"
+msgstr ""
+
+#: class-ps-live-debug.php:333
+msgid ""
+"Stelle sicher, dass Du zuerst eine <strong>vollständige Sicherung</strong> "
+"hast, bevor Du mit einem der Tools fortfährst."
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:128
+msgid "Task"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:195
+#: classes/class-ps-live-debug-tools.php:258
+msgid "Testen und Sammeln von Informationen für:"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:112
+msgid "Testmail senden"
+msgstr ""
+
+#. %s: website url.
+#: classes/class-ps-live-debug-tools.php:59
+#, php-format
+msgid "Testnachricht von %s"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:260
+msgid "Themes"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:427
+msgid "Themes-Verzeichnis"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:821
+msgid "This is not a log file."
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:212
+#: classes/class-ps-live-debug-tools.php:218
+#: classes/class-ps-live-debug-tools.php:230
+#: classes/class-ps-live-debug-tools.php:249
+#: classes/class-ps-live-debug-wordpress-info.php:282
+#: classes/class-ps-live-debug-wordpress-info.php:293
+#: classes/class-ps-live-debug-wordpress-info.php:453
+#: classes/class-ps-live-debug-wordpress-info.php:464
+msgid "Titel"
+msgstr ""
+
+#: classes/class-ps-live-debug-helper.php:88
+#: classes/class-ps-live-debug-helper.php:98
+#: classes/class-ps-live-debug-helper.php:144
+#: classes/class-ps-live-debug-helper.php:150
+msgid "Title"
+msgstr ""
+
+#: classes/class-ps-live-debug-helper.php:167
+msgid "Undefined"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:447
+msgid ""
+"Ungültige Berechtigungen gefunden, einige Werte sind möglicherweise ungenau."
+msgstr ""
+
+#: classes/class-ps-live-debug-server-info.php:162
+#: classes/class-ps-live-debug-server-info.php:173
+#: classes/class-ps-live-debug-server-info.php:174
+msgid "Unknown"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:423
+msgid "Uploads-Verzeichnis"
+msgstr ""
+
+#: classes/class-ps-live-debug-helper.php:88
+#: classes/class-ps-live-debug-helper.php:98
+#: classes/class-ps-live-debug-helper.php:144
+#: classes/class-ps-live-debug-helper.php:150
+msgid "Value"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:150
+#: classes/class-ps-live-debug-wordpress-info.php:156
+msgid "veraltet"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:272
+msgid "Verbindung mit ClassicPress.org"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:89
+msgid "Verifizieren"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:352
+#: classes/class-ps-live-debug-wordpress-info.php:363
+msgid "Verzeichnis"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:53
+msgid "Verzeichnisberechtigungen"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:67
+msgid "Viewing"
+msgstr ""
+
+#: classes/class-ps-live-debug-wordpress-info.php:256
+msgid "Webseiten"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:410
+#: classes/class-ps-live-debug-tools.php:475
+msgid "Weiß deine Mutter, dass du das machst?"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:430
+msgid "Werde dies nicht tun."
+msgstr ""
+
+#: class-ps-live-debug.php:270
+msgid "Werkzeug"
+msgstr ""
+
+#: class-ps-live-debug.php:282
+msgid "Werkzeuge"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:212
+#: classes/class-ps-live-debug-tools.php:218
+#: classes/class-ps-live-debug-tools.php:230
+#: classes/class-ps-live-debug-tools.php:249
+#: classes/class-ps-live-debug-wordpress-info.php:282
+#: classes/class-ps-live-debug-wordpress-info.php:293
+#: classes/class-ps-live-debug-wordpress-info.php:453
+#: classes/class-ps-live-debug-wordpress-info.php:464
+msgid "Wert"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:86
+msgid "WP Cron is Disabled!"
+msgstr ""
+
+#: classes/class-ps-live-debug-cronjob-info.php:88
+msgid "WP Cron is Enabled!"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:129
+msgid "WP Debug"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:229
+msgid "wp-config.php backup failed."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:236
+msgid "wp-config.php backup was created."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:263
+msgid "wp-config.php backup was restored."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:254
+msgid "wp-config.php restore failed."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:360
+msgid "WP_DEBUG was disabled."
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:321
+msgid "WP_DEBUG was enabled."
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:82
+msgid "wp_mail() Check"
+msgstr ""
+
+#: classes/class-ps-live-debug-live-debug.php:168
+msgid "You can always find more information at"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:240
+msgid "Zertifikat-ID"
+msgstr ""
+
+#: classes/class-ps-live-debug-tools.php:333
+msgid "Änderungen anzeigen"
+msgstr ""
