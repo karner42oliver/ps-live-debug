@@ -303,16 +303,20 @@ if ( ! class_exists( 'PS_Live_Debug_Tools' ) ) {
 		public static function call_checksums_api() {
 			$wpversion       = get_bloginfo( 'version' );
 			$wplocale        = get_locale();
-			$checksumapi     = wp_remote_get( 'https://api.classicpress.net/core/checksums/1.0/?version=' . $wpversion . '&locale=' . $wplocale, array( 'timeout' => 10000 ) );
-			$checksumapibody = json_decode( wp_remote_retrieve_body( $checksumapi ), true );
+			       $checksumapi     = wp_remote_get( 'https://api.classicpress.net/core/checksums/1.0/?version=' . $wpversion . '&locale=' . $wplocale, array( 'timeout' => 10000 ) );
+			       $checksumapibody = json_decode( wp_remote_retrieve_body( $checksumapi ), true );
 
-			foreach ( $checksumapibody['checksums'] as $file => $checksum ) {
-				if ( false !== strpos( $file, 'wp-content/' ) ) {
-					unset( $checksumapibody['checksums'][ $file ] );
-				}
-			}
+			       if ( ! is_array( $checksumapibody ) || ! isset( $checksumapibody['checksums'] ) || ! is_array( $checksumapibody['checksums'] ) ) {
+				       return array( 'checksums' => array() );
+			       }
 
-			return $checksumapibody;
+			       foreach ( $checksumapibody['checksums'] as $file => $checksum ) {
+				       if ( false !== strpos( $file, 'wp-content/' ) ) {
+					       unset( $checksumapibody['checksums'][ $file ] );
+				       }
+			       }
+
+			       return $checksumapibody;
 		}
 
 		/**
@@ -328,15 +332,20 @@ if ( ! class_exists( 'PS_Live_Debug_Tools' ) ) {
 			$filepath = ABSPATH;
 			$files    = array();
 
-			foreach ( $checksums['checksums'] as $file => $checksum ) {
-				if ( file_exists( $filepath . $file ) && md5_file( $filepath . $file ) !== $checksum ) {
-					$reason = '<button data-do="ps-live-debug-diff" class="sui-button sui-button-red" data-file="' . $file . '">' . esc_html__( 'Änderungen anzeigen', 'ps-live-debug' ) . '</button>';
-					array_push( $files, array( $file, $reason ) );
-				} elseif ( ! file_exists( $filepath . $file ) ) {
-					$reason = esc_html__( 'Datei nicht gefunden', 'ps-live-debug' );
-					array_push( $files, array( $file, $reason ) );
-				}
-			}
+
+			       if ( ! is_array( $checksums ) || ! isset( $checksums['checksums'] ) || ! is_array( $checksums['checksums'] ) ) {
+				       return $files;
+			       }
+
+			       foreach ( $checksums['checksums'] as $file => $checksum ) {
+				       if ( file_exists( $filepath . $file ) && md5_file( $filepath . $file ) !== $checksum ) {
+					       $reason = '<button data-do="ps-live-debug-diff" class="sui-button sui-button-red" data-file="' . $file . '">' . esc_html__( 'Änderungen anzeigen', 'ps-live-debug' ) . '</button>';
+					       array_push( $files, array( $file, $reason ) );
+				       } elseif ( ! file_exists( $filepath . $file ) ) {
+					       $reason = esc_html__( 'Datei nicht gefunden', 'ps-live-debug' );
+					       array_push( $files, array( $file, $reason ) );
+				       }
+			       }
 
 			return $files;
 		}

@@ -1,16 +1,17 @@
 <?php //phpcs:ignore
 /**
  *
- * Plugin Name: PS-Debug-Tool
- * Plugin URI: https://cp-psource.github.io/ps-live-debug/
+ * Plugin Name: PSOURCE Live Debug
+ * Plugin URI: https://power-source.github.io/ps-live-debug/
  * Description: Aktiviert das Debuggen und fügt dem ClassicPress-Admin einen Bildschirm hinzu, um das debug.log anzuzeigen.
  * Version: 1.0.0
  * Author: PSOURCE
- * Author URI: https://github.com/cp-psource
+ * Author URI: https://github.com/Power-Source
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: ps-live-debug
  * Domain Path: /languages
+ * PS Network: required
  *
  */
 
