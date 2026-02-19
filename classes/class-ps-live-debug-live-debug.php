@@ -392,8 +392,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "define( 'WP_DEBUG_LOG', true ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "define( 'WP_DEBUG_LOG', true ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
@@ -433,8 +432,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "define( 'WP_DEBUG_LOG', false ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "define( 'WP_DEBUG_LOG', false ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
@@ -475,8 +473,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "define( 'WP_DEBUG_DISPLAY', false ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "define( 'WP_DEBUG_DISPLAY', false ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
@@ -517,8 +514,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "@ini_set( 'display_errors', 0 ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "@ini_set( 'display_errors', 0 ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
@@ -561,8 +557,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "define( 'SCRIPT_DEBUG', true ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "define( 'SCRIPT_DEBUG', true ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
@@ -612,8 +607,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "define( 'SCRIPT_DEBUG', false ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "define( 'SCRIPT_DEBUG', false ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
@@ -663,8 +657,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "define( 'SAVEQUERIES', true ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "define( 'SAVEQUERIES', true ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
@@ -714,8 +707,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 
 				foreach ( $editing_wpconfig as $line ) {
 					if ( false !== strpos( $line, 'stop editing!' ) ) {
-						$line  = "define( 'SAVEQUERIES', false ); // Added by CP Live Debug" . PHP_EOL;
-						$line .= "/* That's all, stop editing! Happy blogging. */" . PHP_EOL;
+						fputs( $write_wpconfig, "define( 'SAVEQUERIES', false ); // Added by CP Live Debug" . PHP_EOL );
 					}
 
 					fputs( $write_wpconfig, $line );
