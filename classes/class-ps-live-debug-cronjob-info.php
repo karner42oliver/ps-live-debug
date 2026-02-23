@@ -83,9 +83,9 @@ if ( ! class_exists( 'PS_Live_Debug_Cronjob_Info' ) ) {
 		public static function scheduled_events() {
 
 			if ( defined( 'DISABLE_WP_CRON' ) && DISABLE_WP_CRON ) {
-				$output = '<div class="sui-notice sui-notice-error"><p>' . esc_html__( 'WP Cron is Disabled!', 'ps-live-debug' ) . '</p></div>';
+				$output = '<div class="sui-notice sui-notice-error"><p>' . esc_html__( 'WP Cron ist deaktiviert!', 'ps-live-debug' ) . '</p></div>';
 			} else {
-				$output = '<div class="sui-notice sui-notice-success"><p>' . esc_html__( 'WP Cron is Enabled!', 'ps-live-debug' ) . '</p></div>';
+				$output = '<div class="sui-notice sui-notice-success"><p>' . esc_html__( 'WP Cron ist aktiviert!', 'ps-live-debug' ) . '</p></div>';
 			}
 
 			if ( function_exists( '_get_cron_array' ) ) {
@@ -95,7 +95,7 @@ if ( ! class_exists( 'PS_Live_Debug_Cronjob_Info' ) ) {
 			}
 
 			$output .= '<table class="sui-table striped">';
-			$output .= '<thead><tr><th>' . esc_html__( 'Event', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Actions', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Schedule', 'ps-live-debug' ) . '</th></tr></thead><tbody>';
+			$output .= '<thead><tr><th>' . esc_html__( 'Ereignis', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Aktionen', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Zeitplan', 'ps-live-debug' ) . '</th></tr></thead><tbody>';
 
 			$events = PS_Live_Debug_Cronjob_Info::get_events();
 
@@ -121,11 +121,11 @@ if ( ! class_exists( 'PS_Live_Debug_Cronjob_Info' ) ) {
 
 				$output .= implode( '', $actions );
 				$output .= '</td>';
-				$output .= '<td><strong>' . esc_html__( 'Next run in', 'ps-live-debug' ) . ':</strong> ' . human_time_diff( $event->time, time() ) . '<br>' . date( 'H:i - F j, Y', $event->time ) . '</td>';
+				$output .= '<td><strong>' . esc_html__( 'Nächster Lauf in', 'ps-live-debug' ) . ':</strong> ' . human_time_diff( $event->time, time() ) . '<br>' . date( 'H:i - F j, Y', $event->time ) . '</td>';
 				$output .= '</tr>';
 			}
 
-			$output .= '<tfoot><tr><th>' . esc_html__( 'Task', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Actions', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Schedule', 'ps-live-debug' ) . '</th></tr></tfoot>';
+			$output .= '<tfoot><tr><th>' . esc_html__( 'Aufgabe', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Aktionen', 'ps-live-debug' ) . '</th><th>' . esc_html__( 'Zeitplan', 'ps-live-debug' ) . '</th></tr></tfoot>';
 			$output .= '</tbody></table>';
 
 			$response = array(

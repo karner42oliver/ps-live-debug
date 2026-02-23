@@ -229,6 +229,17 @@
 	}
 	// Debug View
 	if ( debugArea.length ) {
+		// Restore auto-refresh toggle state from localStorage
+		var autoRefreshEnabled = localStorage.getItem( 'ps-live-debug-auto-refresh' );
+		if ( autoRefreshEnabled === 'true' ) {
+			refreshToggle.prop( 'checked', true );
+		}
+		
+		// Save toggle state when changed
+		refreshToggle.on( 'change', function() {
+			localStorage.setItem( 'ps-live-debug-auto-refresh', $( this ).is( ':checked' ) );
+		} );
+		
 		// Make the initial debug.log read.
 		$.post( ajaxurl, refreshData, function( response ) {
 			debugArea.html( response );

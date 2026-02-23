@@ -64,7 +64,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 				<div class="sui-box">
 					<div class="sui-box-body">
 						<div class="sui-form-field">
-							<label for="ps-live-debug-area" class="sui-label"><?php echo esc_html__( 'Viewing', 'ps-live-debug' ) . ': ' . $option_log_name; ?></label>
+							<label for="ps-live-debug-area" class="sui-label"><?php echo esc_html__( 'Ansicht', 'ps-live-debug' ) . ': ' . $option_log_name; ?></label>
 							<textarea id="ps-live-debug-area" name="ps-live-debug-area" class="sui-form-control"></textarea>
 						</div>
 						<?php
@@ -97,10 +97,10 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 					<div class="sui-box-body">
 						<div class="sui-row">
 							<div class="sui-col-md-4 sui-col-lg-4 text-center">
-									<button id="ps-live-debug-clear" data-log="<?php echo $option_log_name; ?>" data-nonce="<?php echo wp_create_nonce( $option_log_name ); ?>" type="button" class="sui-button sui-button-primary"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Clear Log', 'ps-live-debug' ); ?></button>
+									<button id="ps-live-debug-clear" data-log="<?php echo $option_log_name; ?>" data-nonce="<?php echo wp_create_nonce( $option_log_name ); ?>" type="button" class="sui-button sui-button-primary"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Log leeren', 'ps-live-debug' ); ?></button>
 							</div>
 							<div class="sui-col-md-4 sui-col-lg-4 text-center">
-									<button id="ps-live-debug-delete" data-log="<?php echo $option_log_name; ?>" data-nonce="<?php echo wp_create_nonce( $option_log_name ); ?>" type="button" class="sui-button sui-button-red"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Delete Log', 'ps-live-debug' ); ?></button>
+									<button id="ps-live-debug-delete" data-log="<?php echo $option_log_name; ?>" data-nonce="<?php echo wp_create_nonce( $option_log_name ); ?>" type="button" class="sui-button sui-button-red"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Log löschen', 'ps-live-debug' ); ?></button>
 							</div>
 							<div class="sui-col-md-4 sui-col-lg-4 text-center">
 								<label class="sui-toggle">
@@ -114,14 +114,14 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 						<div class="sui-row mt30">
 						<?php if ( ! PS_Live_Debug_Live_Debug::check_wp_config_backup() ) { ?>
 							<div class="sui-col-lg-12 text-center">
-								<button id="ps-live-debug-backup" type="button" class="sui-button sui-button-green"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Backup wp-config and show options', 'ps-live-debug' ); ?></button>
+								<button id="ps-live-debug-backup" type="button" class="sui-button sui-button-green"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Backup wp-config und Optionen anzeigen', 'ps-live-debug' ); ?></button>
 							</div>
 							<?php } else { ?>
 							<div class="sui-col-md-6 sui-col-lg-3 text-center">
-								<button id="ps-live-debug-restore" type="button" class="sui-button sui-button-primary"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'Restore wp-config', 'ps-live-debug' ); ?></button>
+								<button id="ps-live-debug-restore" type="button" class="sui-button sui-button-primary"><i class="sui-icon-loader sui-loading" aria-hidden="true"></i> <?php esc_html_e( 'wp-config wiederherstellen', 'ps-live-debug' ); ?></button>
 							</div>
 							<div class="sui-col-md-6 sui-col-lg-3 text-center">
-								<span class="sui-tooltip sui-tooltip-top sui-tooltip-constrained" data-tooltip="The WP_DEBUG constant that can be used to trigger the 'debug' mode throughout ClassicPress. This will enable WP_DEBUG, WP_DEBUG_LOG and disable WP_DEBUG_DISPLAY and display_errors.">
+								<span class="sui-tooltip sui-tooltip-top sui-tooltip-constrained" data-tooltip="Die WP_DEBUG Konstante kann verwendet werden, um den 'Debug'-Modus in ClassicPress zu aktivieren. Dies wird WP_DEBUG, WP_DEBUG_LOG aktivieren und WP_DEBUG_DISPLAY sowie display_errors deaktivieren.">
 									<label class="sui-toggle">
 										<input type="checkbox" id="toggle-wp-debug" <?php echo ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? 'checked' : ''; ?> >
 										<span class="sui-toggle-slider"></span>
@@ -130,7 +130,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 								</span>
 							</div>
 							<div class="sui-col-md-6 sui-col-lg-3 text-center">
-								<span class="sui-tooltip sui-tooltip-top sui-tooltip-constrained" data-tooltip="The SCRIPT_DEBUG constant will force ClassicPress to use the 'dev' versions of some core CSS and JavaScript files rather than the minified versions that are normally loaded.">
+								<span class="sui-tooltip sui-tooltip-top sui-tooltip-constrained" data-tooltip="Die SCRIPT_DEBUG Konstante erzwingt, dass ClassicPress die 'dev'-Versionen einiger Kern-CSS- und JavaScript-Dateien verwendet, anstatt der normalerweise geladenen minifizierten Versionen.">
 									<label class="sui-toggle">
 										<input type="checkbox" id="toggle-script-debug" <?php echo ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? 'checked' : ''; ?> >
 										<span class="sui-toggle-slider"></span>
@@ -139,12 +139,12 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 								</span>
 							</div>
 							<div class="sui-col-md-6 sui-col-lg-3 text-center">
-								<span class=" sui-tooltip sui-tooltip-top sui-tooltip-constrained" data-tooltip="The SAVEQUERIES constant causes each query to be saved in the databse along with how long that query took to execute and what function called it. The array is stored in the global $wpdb->queries.">
+								<span class=" sui-tooltip sui-tooltip-top sui-tooltip-constrained" data-tooltip="Die SAVEQUERIES Konstante bewirkt, dass jede Abfrage zusammen mit der Ausführungszeit und der aufrufenden Funktion in der Datenbank gespeichert wird. Das Array wird in der globalen Variable $wpdb->queries gespeichert.">
 									<label class="sui-toggle">
 										<input type="checkbox" id="toggle-savequeries" <?php echo ( defined( 'SAVEQUERIES' ) && SAVEQUERIES ) ? 'checked' : ''; ?> >
 										<span class="sui-toggle-slider"></span>
 									</label>
-									<label for="toggle-savequeries"><?php esc_html_e( 'Save Queries', 'ps-live-debug' ); ?></label>
+									<label for="toggle-savequeries"><?php esc_html_e( 'Abfragen speichern', 'ps-live-debug' ); ?></label>
 								</span>
 							</div>
 							<?php } ?>
@@ -154,10 +154,10 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 						<p class="sui-description">
 							<?php
 							// translators: %1$s ClassicPress installation path.
-							echo sprintf( __( 'If you did not download &amp; verify the wp-config.php backup during activation you can find two extra backups via FTP as well in <code>%1$s</code> as <code>wp-config.wpld-manual-backup.php</code> and <code>wp-config.wpld-original-backup.php</code>.', 'ps-live-debug' ), wp_normalize_path( ABSPATH ) );
+							echo sprintf( __( 'Wenn Du das wp-config.php-Backup während der Aktivierung nicht heruntergeladen und überprüft haben, kannst Du auch zwei zusätzliche Backups über FTP im Verzeichnis <code>%1$s</code> finden: <code>wp-config.wpld-manual-backup.php</code> und <code>wp-config.wpld-original-backup.php</code>.', 'ps-live-debug' ), wp_normalize_path( ABSPATH ) );
 							?>
 							<br><br>
-							<?php _e( "<strong>To manually enable any of the above debugging options you can edit your wp-config.php and add the following constants right above the '/* That's all, stop editing! Happy blogging. */' line.</strong>", 'ps-live-debug' ); ?>
+							<?php _e( "<strong>Um eine der oben genannten Debugging-Optionen manuell zu aktivieren, kannst Du Deine wp-config.php bearbeiten und die folgenden Konstanten direkt über der Zeile '/* That's all, stop editing! Happy blogging. */' hinzufügen.</strong>", 'ps-live-debug' ); ?>
 							<br><br>
 							<?php _e( "<strong>CP Debug: <code>define( 'WP_DEBUG', true ); define( 'WP_DEBUG_LOG', true ); define( 'WP_DEBUG_DISPLAY', false ); @ini_set( 'display_errors', 0 );</code>", 'ps-live-debug' ); ?>
 							<br>
@@ -165,7 +165,7 @@ if ( ! class_exists( 'PS_Live_Debug_Live_Debug' ) ) {
 							<br>
 							<?php _e( "<strong>Save Queries: <code>define( 'SAVEQUERIES', true );</code>", 'ps-live-debug' ); ?>
 							<br><br>
-							<?php esc_html_e( 'You can always find more information at', 'ps-live-debug' ); ?> <a target="_blank" rel="noopener" href="https://codex.wordpress.org/Debugging_in_ClassicPress"><?php esc_html_e( 'Debugging in ClassicPress', 'ps-live-debug' ); ?></a>.
+							<?php esc_html_e( 'Weitere Informationen findest Du jederzeit unter', 'ps-live-debug' ); ?> <a target="_blank" rel="noopener" href="https://codex.wordpress.org/Debugging_in_ClassicPress"><?php esc_html_e( 'Debugging in ClassicPress', 'ps-live-debug' ); ?></a>.
 						</p>
 					</div>
 				</div>
