@@ -139,16 +139,11 @@ if ( ! class_exists( 'PS_Live_Debug_Server_Info' ) ) {
 			$variables = $wpdb->get_results( "SHOW VARIABLES WHERE Variable_name IN ( '" . implode( "', '", array_keys( $mysql_vars ) ) . "' )" ); // phpcs:ignore
 			$dbh       = $wpdb->dbh;
 
-			if ( is_resource( $dbh ) ) {
-				$driver = 'mysql';
+			if ( $dbh instanceof mysqli ) {
+				$driver = 'mysqli';
 
-				if ( function_exists( 'mysqli_get_server_info' ) ) {
-					// phpcs:ignore ClassicPress.DB.RestrictedFunctions.mysql_mysqli_get_server_info
-					$version = mysqli_get_server_info( $dbh );
-				} else {
-					// phpcs:disable ClassicPress.DB.RestrictedFunctions.mysql_mysql_get_server_info
-					$version = mysql_get_server_info( $dbh );
-				}
+				// phpcs:ignore ClassicPress.DB.RestrictedFunctions.mysql_mysqli_get_server_info
+				$version = mysqli_get_server_info( $dbh );
 			} elseif ( is_object( $dbh ) ) {
 				$driver = get_class( $dbh );
 

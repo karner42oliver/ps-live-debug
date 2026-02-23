@@ -20,7 +20,7 @@
 			$dropdowns.removeClass( 'open' );
 		}
 
-		$( 'body' ).click( function( e ) {
+		$( 'body' ).on( 'click', function( e ) {
 			var $this = $( e.target ),
 				$el = $this.closest( '.sui-dropdown' );
 

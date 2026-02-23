@@ -110,6 +110,7 @@ if ( ! class_exists( 'PS_Live_Debug' ) ) {
 		 */
 		public function init() {
 			add_action( 'init', array( 'PS_Live_Debug', 'create_menus' ) );
+			add_action( 'wp_default_scripts', array( 'PS_Live_Debug', 'remove_jquery_ui_scripts' ), 10 );
 			add_action( 'admin_enqueue_scripts', array( 'PS_Live_Debug', 'enqueue_scripts_styles' ) );
 			add_action( 'wp_ajax_ps-live-debug-accept-risk', array( 'PS_Live_Debug', 'accept_risk' ) );
 		}
@@ -240,6 +241,49 @@ if ( ! class_exists( 'PS_Live_Debug' ) ) {
 					true
 				);
 				add_filter( 'admin_body_class', array( 'PS_Live_Debug', 'admin_body_classes' ) );
+			}
+		}
+
+		/**
+		 * Remove jQuery UI scripts from WordPress registry.
+		 * Prevents deprecated jQuery UI warnings in ClassicPress 2.2.0+.
+		 *
+		 * @param WP_Scripts $scripts The WP_Scripts object.
+		 *
+		 * @return void
+		 */
+		public static function remove_jquery_ui_scripts( $scripts ) {
+			// List of jQuery UI scripts to remove from the registry
+			$ui_scripts = array(
+				'jquery-ui',
+				'jquery-ui-core',
+				'jquery-ui-menu',
+				'jquery-ui-position',
+				'jquery-ui-widget',
+				'jquery-ui-mouse',
+				'jquery-ui-draggable',
+				'jquery-ui-droppable',
+				'jquery-ui-resizable',
+				'jquery-ui-selectable',
+				'jquery-ui-sortable',
+				'jquery-ui-accordion',
+				'jquery-ui-autocomplete',
+				'jquery-ui-button',
+				'jquery-ui-datepicker',
+				'jquery-ui-dialog',
+				'jquery-ui-slider',
+				'jquery-ui-tabs',
+				'jquery-ui-progressbar',
+				'jquery-ui-spinbutton',
+				'jquery-ui-tooltip',
+				'jquery-ui-spinner',
+			);
+
+			// Remove all jQuery UI scripts before they can be enqueued
+			foreach ( $ui_scripts as $script_handle ) {
+				if ( isset( $scripts->registered[ $script_handle ] ) ) {
+					unset( $scripts->registered[ $script_handle ] );
+				}
 			}
 		}
 

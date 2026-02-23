@@ -1638,7 +1638,7 @@
 			$dropdowns.removeClass( 'open' );
 		}
 
-		$( 'body' ).click( function( e ) {
+		$( 'body' ).on( 'click', function( e ) {
 			var $this = $( e.target ),
 				$el = $this.closest( '.sui-dropdown' );
 
@@ -1688,7 +1688,7 @@
 	// This will auto hide the top notice if the classes .sui-can-dismiss or .sui-cant-dismiss aren't present.
 	$( '.sui-2-2-10 .sui-notice-top:not(.sui-can-dismiss, .sui-cant-dismiss)' ).delay( 3000 ).slideUp( 'slow' );
 
-	$( '.sui-2-2-10 .sui-notice-dismiss' ).click( function( e ) {
+	$( '.sui-2-2-10 .sui-notice-dismiss' ).on( 'click', function( e ) {
 		e.preventDefault();
 
         $( this ).parent().stop().slideUp( 'slow' );
@@ -1964,7 +1964,7 @@
 			value.on( 'click', stateToggle );
 			jq.on( 'focus', stateOpen );
 
-			$( document ).click( function onOutsideClick( ev ) {
+			$( document ).on( 'click', function onOutsideClick( ev ) {
 				var jq = $( ev.target ),
 					selectID;
 

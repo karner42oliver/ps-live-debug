@@ -122,7 +122,7 @@
 			}
 		} );
 	};
-	sslForm.submit( function( e ) {
+	sslForm.on( 'submit', function( e ) {
 		e.preventDefault();
 		sslResponse.html( '<i class="sui-icon-loader sui-loading" aria-hidden="true"></i>' );
 		runSSLCheck();
@@ -180,7 +180,7 @@
 		} );
 	}
 	// Mail Check
-	mailCheckForm.submit( function( e ) {
+	mailCheckForm.on( 'submit', function( e ) {
 		var email = $( '#ps-live-debug-mail-check #email' ).val(),
 			emailSubject = $( '#ps-live-debug-mail-check #email_subject' ).val(),
 			emailMessage = $( '#ps-live-debug-mail-check #email_message' ).val(),

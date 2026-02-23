@@ -174,7 +174,7 @@
 			value.on( 'click', stateToggle );
 			jq.on( 'focus', stateOpen );
 
-			$( document ).click( function onOutsideClick( ev ) {
+			$( document ).on( 'click', function onOutsideClick( ev ) {
 				var jq = $( ev.target ),
 					selectID;
 
