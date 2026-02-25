@@ -66,7 +66,7 @@
 						item.addClass( 'sui-element-flex' );
 						var span1 = $( '<span></span>' ).text( opt.text() );
 						var span2 = $( '<span></span>' ).text( opt.data( 'content' ) );
-						item.html( '' ).append( span1, span2 );
+						item.empty().append( span1, span2 );
 					} else {
 						item.text( opt.text() );
 					}
@@ -80,7 +80,7 @@
                     optGroupItem = $( '<ul></ul>' ).appendTo( items );
                     $label = $( '<li class="optgroup-label"></li>' ).text( optgroup.prop( 'label' ) );
 
-                    optGroupItem.html( $label );
+					optGroupItem.empty().append( $label );
                     optGroupItem.addClass( 'optgroup' );
 
                     optgroup.find( 'option' ).each( function onPopulateLoop() {
